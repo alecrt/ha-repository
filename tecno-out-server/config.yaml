@@ -1,0 +1,29 @@
+name: "TecnoOut FastAPI"
+description: "TecnoOut Fast API addon to expose a custom API and WS for management from mobile app"
+version: "1.0.2"
+slug: "tecno_out_fast_api"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+startup: services
+ports:
+  8000/tcp: 8000
+
+# Opzioni predefinite
+options:
+  log_level: info
+  host: null
+  port: 10102
+  code: null
+  token: ""
+
+# Schema di validazione
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+  host: str
+  port: int(1,65535)
+  code: int(0,999999)
+  token: str?
+image: "alecrt/{arch}-tecnoout-fastapi"
