@@ -17,6 +17,7 @@ options:
   host: null
   port: 10102
   code: null
+  apikey: null
   token: ""
 
 # Schema di validazione
@@ -25,5 +26,6 @@ schema:
   host: str
   port: int(1,65535)
   code: int(0,999999)
+  apikey: password
   token: str?
 image: "alecrt/{arch}-tecnoout-fastapi"
