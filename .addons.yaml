@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  adguard:
+    repository: alecrt/tecnoOUTserver
+    target: tecno-out-server
+    image: "alecrt/{arch}-tecnoout-fastapi"
