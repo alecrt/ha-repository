@@ -1,6 +1,6 @@
 name: "TecnoOut FastAPI"
 description: "TecnoOut Fast API addon to expose a custom API and WS for management from mobile app"
-version: "1.0.8"
+version: "1.0.9"
 slug: "tecno_out_fast_api"
 init: false
 arch:
