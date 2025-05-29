@@ -1,6 +1,6 @@
 name: "TecnoOut FastAPI"
 description: "TecnoOut Fast API addon to expose a custom API and WS for management from mobile app"
-version: "1.0.10"
+version: "1.0.11"
 slug: "tecno_out_fast_api"
 init: false
 arch:
@@ -19,6 +19,7 @@ options:
   code: null
   apikey: null
   token: ""
+  firebase: "/share/firebase-credentials.json"
 
 # Schema di validazione
 schema:
@@ -28,7 +29,10 @@ schema:
   code: int(0,999999)
   apikey: password
   token: str?
+  firebase: str
 
-environment:
-  FIREBASE_CREDENTIALS_PATH: "/share/firebase-credentials.json"
+map:
+  - type: share
+    read_only: False
+
 image: "alecrt/{arch}-tecnoout-fastapi"
